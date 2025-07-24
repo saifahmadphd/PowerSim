@@ -1,2 +1,2 @@
 # PowerSim
-Repository for simulating grid frequency dynamics in large scale transimission system. It makes use of Rosenbrock-Euler implicit method for numerical integration to allow selection of large simulation time-steps. 
+Repository for simulating grid frequency dynamics in a large-scale transmission system. It makes use of the Rosenbrock-Euler implicit method (with AutomaticDifferentiation (from JAX) to compute the Jacobian) for numerical integration to allow selection of large simulation time-steps. By default, it uses the per-unit reactance data for transmission lines and connections for the IEEE 14 bus, but this can be customized.
