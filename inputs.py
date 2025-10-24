@@ -52,7 +52,7 @@ def inputs_res_load(
     if prbs_levels is None:
         prbs_levels = [0.001*random.choice([-1,1]) / i for i in range(1, 7)]
     if prbs_rates is None:
-        prbs_rates = [i * delta_t / 5 for i in range(1, 7)]
+        prbs_rates = [i * delta_t / 50 for i in range(1, 7)]
     if len(prbs_levels) != len(prbs_rates):
         raise ValueError("prbs_levels and prbs_rates must match in length")
 
@@ -74,8 +74,8 @@ def inputs_res_load(
     return inputs
 
 number_of_buses = 14        # no. of buses in the electrical system
-num_steps = 500     # number of time steps 
-h = 1                  # step size
+num_steps = 50000    # number of time steps 
+h = 0.0001                  # step size
 delta = 0.00005             # for the random walk
 threshold = 0.005           # for resetting random walk if it goes beyond 
 decay_factor = 0.2          # factor of resetting
